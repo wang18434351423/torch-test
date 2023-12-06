@@ -14,7 +14,7 @@ your_car_model_labels = set(entry['car_name'] for entry in data_list)
 class VinDataset(Dataset):
     def __init__(self, data):
         self.data = data
-        self.tokenizer = AutoTokenizer.from_pretrained("bert-base-cinese")
+        self.tokenizer = AutoTokenizer.from_pretrained("bert-base-chinese")
 
     def __len__(self):
         return len(self.data)
