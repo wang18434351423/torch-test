@@ -65,6 +65,7 @@ for epoch in range(num_epochs):
         loss.backward()
         optimizer.step()
         total_loss += loss.item()
+        print(f"Loss: {loss.item():.4f}")
     # Validation, testing, or other evaluation steps can be added here
     average_loss = total_loss / len(train_loader)
     print(f"Epoch {epoch + 1} - Average Loss: {average_loss:.4f}")
